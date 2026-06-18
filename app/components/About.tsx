@@ -1,10 +1,3 @@
-const stats = [
-  { value: "8+", label: "Anos de experiência" },
-  { value: "3k+", label: "Clientes atendidas" },
-  { value: "98%", label: "Satisfação" },
-  { value: "15+", label: "Tratamentos" },
-];
-
 export default function About() {
   return (
     <section
@@ -13,8 +6,9 @@ export default function About() {
       style={{ background: "var(--cream)" }}
     >
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Text */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+          {/* Left: título + textos */}
           <div>
             <p className="font-[family-name:var(--font-lato)] text-xs tracking-[0.4em] uppercase text-[var(--gold)] mb-4">
               Nossa história
@@ -27,9 +21,23 @@ export default function About() {
             </h2>
             <div className="w-12 h-px mb-8" style={{ background: "var(--gold)" }} />
 
+            <p className="font-[family-name:var(--font-lato)] text-[var(--taupe)] leading-relaxed mb-6">
+              A Clínica Dahlia nasceu da paixão por proporcionar transformações
+              reais aliadas ao cuidado genuíno. Aqui, a biomedicina é a base de
+              cada protocolo — porque seu resultado merece ciência, não achismo.
+            </p>
+            <p className="font-[family-name:var(--font-lato)] text-[var(--taupe)] leading-relaxed">
+              Em um ambiente acolhedor e sofisticado, cada atendimento é
+              personalizado para revelar sua beleza com saúde, autoestima e
+              confiança.
+            </p>
+          </div>
+
+          {/* Right: card biomédica + CTA */}
+          <div className="flex flex-col gap-8 lg:pt-20">
             {/* Biomédica credential card */}
             <div
-              className="flex items-start gap-4 p-5 mb-6 rounded-sm"
+              className="flex items-start gap-4 p-6"
               style={{
                 background: "var(--rose-quartz)",
                 borderLeft: "3px solid var(--marsala)",
@@ -40,7 +48,7 @@ export default function About() {
               </span>
               <div>
                 <p
-                  className="font-[family-name:var(--font-lato)] text-xs tracking-[0.3em] uppercase font-semibold mb-1"
+                  className="font-[family-name:var(--font-lato)] text-xs tracking-[0.3em] uppercase font-semibold mb-2"
                   style={{ color: "var(--marsala)" }}
                 >
                   Biomédica Especializada
@@ -53,45 +61,22 @@ export default function About() {
               </div>
             </div>
 
-            <p className="font-[family-name:var(--font-lato)] text-[var(--taupe)] leading-relaxed mb-6">
-              A Clínica Dahlia nasceu da paixão por proporcionar transformações
-              reais aliadas ao cuidado genuíno. Aqui, a biomedicina é a base de
-              cada protocolo — porque seu resultado merece ciência, não achismo.
-            </p>
-            <p className="font-[family-name:var(--font-lato)] text-[var(--taupe)] leading-relaxed mb-8">
-              Em um ambiente acolhedor e sofisticado, cada atendimento é
-              personalizado para revelar sua beleza com saúde, autoestima e
-              confiança.
-            </p>
+            {/* Ornamento decorativo */}
+            <div className="flex items-center gap-4">
+              <div className="flex-1 h-px" style={{ background: "var(--gold-light)" }} />
+              <span className="text-xl" style={{ color: "var(--gold)" }}>✦</span>
+              <div className="flex-1 h-px" style={{ background: "var(--gold-light)" }} />
+            </div>
 
             <a
               href="#contato"
-              className="inline-block font-[family-name:var(--font-lato)] text-sm tracking-widest uppercase px-8 py-3 text-white transition-all duration-300 hover:opacity-90 text-center"
+              className="inline-block font-[family-name:var(--font-lato)] text-sm tracking-widest uppercase px-8 py-4 text-white transition-all duration-300 hover:opacity-90 text-center"
               style={{ background: "var(--marsala)" }}
             >
               Conheça a clínica
             </a>
           </div>
 
-          {/* Stats */}
-          <div>
-            <div className="grid grid-cols-2 gap-px" style={{ background: "var(--campestre-light)" }}>
-              {stats.map((stat) => (
-                <div key={stat.label} className="p-10 text-center" style={{ background: "white" }}>
-                  <div
-                    className="font-[family-name:var(--font-cormorant)] text-5xl font-light mb-2"
-                    style={{ color: "var(--marsala)" }}
-                  >
-                    {stat.value}
-                  </div>
-                  <div className="font-[family-name:var(--font-lato)] text-xs tracking-widest uppercase text-[var(--taupe)]">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-          </div>
         </div>
       </div>
     </section>
