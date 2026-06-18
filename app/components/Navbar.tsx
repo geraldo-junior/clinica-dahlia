@@ -19,9 +19,9 @@ function Logo() {
         <Image
           src="/logo.png"
           alt="Clínica Dahlia"
-          width={130}
-          height={52}
-          className="h-12 w-auto object-contain"
+          width={780}
+          height={312}
+          className="h-[312px] w-auto object-contain"
           onError={() => setLogoError(true)}
         />
       )}
