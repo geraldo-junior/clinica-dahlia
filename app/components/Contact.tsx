@@ -14,6 +14,31 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const serviceLabels: Record<string, string> = {
+      limpeza: "Limpeza de Pele",
+      botox: "Botox & Preenchimento",
+      peeling: "Peeling Químico",
+      modeladora: "Massagem Modeladora",
+      drenagem: "Drenagem Linfática",
+      microagulhamento: "Microagulhamento",
+      outro: "Outro",
+    };
+
+    const texto = [
+      "Olá! Gostaria de agendar um procedimento na Clínica Dahlia. 🌸",
+      "",
+      `*Nome:* ${form.name}`,
+      form.phone ? `*Telefone:* ${form.phone}` : null,
+      form.email ? `*E-mail:* ${form.email}` : null,
+      form.service ? `*Serviço:* ${serviceLabels[form.service] ?? form.service}` : null,
+      form.message ? `*Mensagem:* ${form.message}` : null,
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    const url = `https://wa.me/5511980731649?text=${encodeURIComponent(texto)}`;
+    window.open(url, "_blank");
     setSubmitted(true);
   };
 
