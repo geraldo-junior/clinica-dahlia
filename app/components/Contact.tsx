@@ -37,7 +37,7 @@ export default function Contact() {
       .filter(Boolean)
       .join("\n");
 
-    const url = `https://wa.me/5511980731649?text=${encodeURIComponent(texto)}`;
+    const url = `https://wa.me/5511949759413?text=${encodeURIComponent(texto)}`;
     window.open(url, "_blank");
     setSubmitted(true);
   };
@@ -75,26 +75,13 @@ export default function Contact() {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <span className="text-lg mt-0.5" style={{ color: "var(--gold)" }}>✦</span>
-                <div>
-                  <p className="font-[family-name:var(--font-lato)] text-xs tracking-widest uppercase text-[var(--gold)] mb-1">
-                    Endereço
-                  </p>
-                  <p className="font-[family-name:var(--font-lato)] text-white/70 text-sm">
-                    Rua das Flores, 123 – Jardins<br />
-                    São Paulo – SP
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
                 <span className="text-lg mt-0.5" style={{ color: "var(--gold)" }}>◇</span>
                 <div>
                   <p className="font-[family-name:var(--font-lato)] text-xs tracking-widest uppercase text-[var(--gold)] mb-1">
                     Horário
                   </p>
                   <p className="font-[family-name:var(--font-lato)] text-white/70 text-sm">
-                    Seg – Sex: 9h às 19h<br />
-                    Sáb: 9h às 14h
+                    Qua: 9h às 14h
                   </p>
                 </div>
               </div>
@@ -105,8 +92,7 @@ export default function Contact() {
                     Contato
                   </p>
                   <p className="font-[family-name:var(--font-lato)] text-white/70 text-sm">
-                    (11) 99999-9999<br />
-                    contato@clinicadahlia.com.br
+                    (11) 94975-9413
                   </p>
                 </div>
               </div>
