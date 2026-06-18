@@ -75,6 +75,14 @@ export default function Contact() {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
+                <span className="text-lg mt-0.5" style={{ color: "var(--gold)" }}>✦</span>
+                <div>
+                  <p className="font-[family-name:var(--font-lato)] text-xs tracking-widest uppercase text-[var(--gold)] mb-1">
+                    Endereço
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
                 <span className="text-lg mt-0.5" style={{ color: "var(--gold)" }}>◇</span>
                 <div>
                   <p className="font-[family-name:var(--font-lato)] text-xs tracking-widest uppercase text-[var(--gold)] mb-1">
