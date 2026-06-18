@@ -17,7 +17,7 @@ function Logo() {
     <a href="#home" className="flex items-center gap-3">
       {!logoError && (
         <Image
-          src="/logo.jpeg"
+          src="/logo.png"
           alt="Clínica Dahlia"
           width={130}
           height={52}

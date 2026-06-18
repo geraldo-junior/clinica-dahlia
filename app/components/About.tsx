@@ -91,17 +91,6 @@ export default function About() {
               ))}
             </div>
 
-            {/* Campestre accent line */}
-            <div className="mt-4 flex items-center gap-3">
-              <div className="flex-1 h-px" style={{ background: "var(--campestre-light)" }} />
-              <span
-                className="font-[family-name:var(--font-lato)] text-xs tracking-[0.3em] uppercase"
-                style={{ color: "var(--campestre)" }}
-              >
-                Cuidado · Precisão · Resultado
-              </span>
-              <div className="flex-1 h-px" style={{ background: "var(--campestre-light)" }} />
-            </div>
           </div>
         </div>
       </div>
