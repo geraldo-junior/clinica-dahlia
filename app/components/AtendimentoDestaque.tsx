@@ -79,7 +79,7 @@ export default function AtendimentoDestaque() {
         {/* CTA */}
         <div className="mt-12 flex flex-col sm:flex-row gap-4 items-center">
           <a
-            href="/atendimento-em-casa"
+            href="/home-care"
             className="font-[family-name:var(--font-lato)] text-sm tracking-widest uppercase px-10 py-4 text-white transition-all duration-300 hover:opacity-90"
             style={{ background: "var(--marsala)" }}
           >

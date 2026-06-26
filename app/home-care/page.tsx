@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Atendimento em Casa | Clínica Dahlia",
+  title: "Home Care | Clínica Dahlia",
   description:
     "Receba os procedimentos estéticos da Clínica Dahlia no conforto da sua residência. Mesma qualidade clínica, sem precisar sair de casa.",
 };
@@ -50,7 +50,7 @@ const benefits = [
   },
 ];
 
-export default function AtendimentoEmCasaPage() {
+export default function HomeCarePage() {
   return (
     <>
       <Navbar />
@@ -85,7 +85,7 @@ export default function AtendimentoEmCasaPage() {
             </div>
 
             <p className="font-[family-name:var(--font-lato)] text-xs tracking-[0.4em] uppercase text-[var(--gold)] mb-4">
-              Clínica Dahlia · Diferencial exclusivo
+              Clínica Dahlia · Home Care
             </p>
             <h1 className="font-[family-name:var(--font-cormorant)] text-5xl md:text-7xl font-light text-[var(--charcoal)] mb-6 leading-tight">
               Estética avançada<br />
@@ -101,7 +101,7 @@ export default function AtendimentoEmCasaPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
               <a
-                href={`https://wa.me/5511949759413?text=${encodeURIComponent("Olá! Gostaria de agendar um atendimento em domicílio com a Clínica Dahlia. 🌸")}`}
+                href={`https://wa.me/5511949759413?text=${encodeURIComponent("Olá! Gostaria de agendar um Home Care com a Clínica Dahlia. 🌸")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-[family-name:var(--font-lato)] text-sm tracking-widest uppercase px-10 py-4 text-white transition-all duration-300 hover:opacity-90"
@@ -160,7 +160,7 @@ export default function AtendimentoEmCasaPage() {
                 Por que escolher
               </p>
               <h2 className="font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl font-light text-[var(--charcoal)] mb-4">
-                Vantagens do Atendimento Domiciliar
+                Vantagens do Home Care
               </h2>
               <div className="gold-divider" />
             </div>
@@ -220,7 +220,7 @@ export default function AtendimentoEmCasaPage() {
             </div>
 
             <a
-              href={`https://wa.me/5511949759413?text=${encodeURIComponent("Olá! Gostaria de agendar um atendimento em domicílio com a Clínica Dahlia. 🌸")}`}
+              href={`https://wa.me/5511949759413?text=${encodeURIComponent("Olá! Gostaria de agendar um Home Care com a Clínica Dahlia. 🌸")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="font-[family-name:var(--font-lato)] text-sm tracking-widest uppercase px-10 py-4 inline-block text-white transition-all duration-300 hover:opacity-90"
