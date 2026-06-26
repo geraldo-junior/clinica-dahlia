@@ -69,11 +69,11 @@ export default function About() {
             </div>
 
             <a
-              href="#contato"
+              href="/contato"
               className="inline-block font-[family-name:var(--font-lato)] text-sm tracking-widest uppercase px-8 py-4 text-white transition-all duration-300 hover:opacity-90 text-center"
               style={{ background: "var(--marsala)" }}
             >
-              Conheça a clínica
+              Agendar Consulta
             </a>
           </div>
 

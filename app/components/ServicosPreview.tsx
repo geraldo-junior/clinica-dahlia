@@ -1,4 +1,4 @@
-const services = [
+const featured = [
   {
     icon: "✦",
     title: "Limpeza de Pele",
@@ -14,32 +14,11 @@ const services = [
     tag: "Facial",
   },
   {
-    icon: "○",
-    title: "Peeling Químico",
-    description:
-      "Renovação celular intensa para tratar manchas, acne e envelhecimento, revelando uma pele mais jovem e uniforme.",
-    tag: "Facial",
-  },
-  {
-    icon: "▽",
-    title: "Massagem Modeladora",
-    description:
-      "Técnica que combina movimentos específicos para definir o corpo, melhorar a circulação e reduzir medidas com eficácia.",
-    tag: "Corporal",
-  },
-  {
     icon: "✧",
     title: "Drenagem Linfática",
     description:
       "Massagem suave que estimula o sistema linfático, reduz inchaço, celulite e promove sensação de leveza e bem-estar.",
     tag: "Corporal",
-  },
-  {
-    icon: "△",
-    title: "Microagulhamento",
-    description:
-      "Estimula a produção natural de colágeno, combatendo cicatrizes, manchas e sinais do envelhecimento com precisão clínica.",
-    tag: "Facial",
   },
 ];
 
@@ -72,32 +51,26 @@ function TagBadge({ tag }: { tag: string }) {
   );
 }
 
-export default function Services() {
+export default function ServicosPreview() {
   return (
-    <section
-      id="servicos"
-      className="py-24 px-6"
-      style={{ background: "var(--background)" }}
-    >
+    <section className="py-24 px-6" style={{ background: "var(--background)" }}>
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
           <p className="font-[family-name:var(--font-lato)] text-xs tracking-[0.4em] uppercase text-[var(--gold)] mb-4">
             O que oferecemos
           </p>
           <h2 className="font-[family-name:var(--font-cormorant)] text-5xl md:text-6xl font-light text-[var(--charcoal)] mb-4">
-            Nossos Serviços
+            Procedimentos em Destaque
           </h2>
           <div className="gold-divider" />
           <p className="font-[family-name:var(--font-lato)] text-[var(--taupe)] max-w-lg mx-auto mt-6 leading-relaxed">
-            Cada protocolo é personalizado e conduzido com rigor técnico biomédico,
-            unindo ciência e cuidado para resultados que você pode sentir e ver.
+            Cada protocolo é personalizado e conduzido com rigor técnico
+            biomédico, unindo ciência e cuidado para resultados reais.
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {featured.map((service) => (
             <div
               key={service.title}
               className="group p-8 bg-white transition-all duration-500 hover:shadow-lg border border-[var(--cream)] hover:border-[var(--rose-quartz-deep)]"
@@ -122,13 +95,12 @@ export default function Services() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-14">
+        <div className="text-center mt-12">
           <a
-            href="/contato"
+            href="/servicos"
             className="font-[family-name:var(--font-lato)] text-sm tracking-widest uppercase px-10 py-4 inline-block border border-[var(--marsala)] text-[var(--marsala)] hover:bg-[var(--marsala)] hover:text-white transition-all duration-300"
           >
-            Agende seu Tratamento
+            Ver todos os serviços
           </a>
         </div>
       </div>

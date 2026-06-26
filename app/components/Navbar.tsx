@@ -2,19 +2,21 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { label: "Início", href: "#home" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Contato", href: "#contato" },
+  { label: "Início", href: "/" },
+  { label: "Serviços", href: "/servicos" },
+  { label: "Atend. em Casa", href: "/atendimento-em-casa" },
+  { label: "Sobre", href: "/sobre" },
 ];
 
 function Logo() {
   const [logoError, setLogoError] = useState(false);
 
   return (
-    <a href="#home" className="flex items-center gap-3">
+    <Link href="/" className="flex items-center gap-3">
       {!logoError && (
         <Image
           src="/logo.png"
@@ -35,19 +37,25 @@ function Logo() {
           </span>
         </div>
       )}
-    </a>
+    </Link>
   );
 }
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  function isActive(href: string) {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  }
 
   return (
     <header
@@ -60,22 +68,26 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Logo />
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
-              className="font-[family-name:var(--font-lato)] text-sm tracking-widest uppercase text-[var(--taupe)] hover:text-[var(--marsala)] transition-colors duration-300"
+              className={`font-[family-name:var(--font-lato)] text-sm tracking-widest uppercase transition-colors duration-300 ${
+                isActive(link.href)
+                  ? "text-[var(--marsala)]"
+                  : "text-[var(--taupe)] hover:text-[var(--marsala)]"
+              }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contato"
+          <Link
+            href="/contato"
             className="font-[family-name:var(--font-lato)] text-sm tracking-widest uppercase px-6 py-2 border border-[var(--marsala)] text-[var(--marsala)] hover:bg-[var(--marsala)] hover:text-white transition-all duration-300"
           >
             Agendar
-          </a>
+          </Link>
         </nav>
 
         <button
@@ -100,22 +112,26 @@ export default function Navbar() {
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-[var(--cream)] px-6 py-4 flex flex-col gap-4">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="font-[family-name:var(--font-lato)] text-sm tracking-widest uppercase text-[var(--taupe)] hover:text-[var(--marsala)] transition-colors"
+              className={`font-[family-name:var(--font-lato)] text-sm tracking-widest uppercase transition-colors ${
+                isActive(link.href)
+                  ? "text-[var(--marsala)]"
+                  : "text-[var(--taupe)] hover:text-[var(--marsala)]"
+              }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contato"
+          <Link
+            href="/contato"
             onClick={() => setMenuOpen(false)}
             className="font-[family-name:var(--font-lato)] text-sm tracking-widest uppercase px-6 py-2 border border-[var(--marsala)] text-[var(--marsala)] text-center hover:bg-[var(--marsala)] hover:text-white transition-all duration-300"
           >
             Agendar
-          </a>
+          </Link>
         </div>
       )}
     </header>

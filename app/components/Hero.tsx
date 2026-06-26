@@ -46,14 +46,14 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#servicos"
+            href="/servicos"
             className="font-[family-name:var(--font-lato)] text-sm tracking-widest uppercase px-10 py-4 text-white transition-all duration-300 hover:opacity-90"
             style={{ background: "var(--marsala)" }}
           >
             Nossos Serviços
           </a>
           <a
-            href="#contato"
+            href="/contato"
             className="font-[family-name:var(--font-lato)] text-sm tracking-widest uppercase px-10 py-4 border border-[var(--charcoal)] text-[var(--charcoal)] hover:bg-[var(--charcoal)] hover:text-white transition-all duration-300"
           >
             Agendar Consulta
