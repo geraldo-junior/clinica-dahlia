@@ -26,7 +26,15 @@ export default function Footer() {
         </p>
 
         <div className="flex gap-6">
-          {["Instagram", "WhatsApp", "Facebook"].map((social) => (
+          <a
+            href="https://www.instagram.com/clinicaspdahlia?igsh=MWc1cmhvNjF6NWdoYQ=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-[family-name:var(--font-lato)] text-xs tracking-widest uppercase text-white/40 hover:text-[var(--rose-quartz)] transition-colors duration-300"
+          >
+            Instagram
+          </a>
+          {["WhatsApp", "Facebook"].map((social) => (
             <a
               key={social}
               href="#"
